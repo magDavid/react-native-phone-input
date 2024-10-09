@@ -73,6 +73,12 @@ export default class PhoneInput<TextComponentType extends React.ComponentType = 
         this.updateValue(number, actionAfterSetState);
     }
 
+    onSubmitEditing = () => {
+        if (this.props.onSubmitEditing) {
+            this.props.onSubmitEditing();
+        }
+    }
+
     onPressFlag = () => {
         if (this.props.onPressFlag) {
             this.props.onPressFlag();
@@ -255,6 +261,7 @@ export default class PhoneInput<TextComponentType extends React.ComponentType = 
                         onChangeText={(text) => {
                             this.onChangePhoneNumber(text);
                         }}
+                        onSubmitEditing={() => { this.onSubmitEditing(); }}
                         keyboardType="phone-pad"
                         underlineColorAndroid="rgba(0,0,0,0)"
                         value={displayValue}

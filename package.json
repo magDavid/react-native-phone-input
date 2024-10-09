@@ -29,6 +29,7 @@
     "android"
   ],
   "dependencies": {
+    "@react-native-picker/picker": "^2.8.1",
     "google-libphonenumber": "^3.2.32",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1"
