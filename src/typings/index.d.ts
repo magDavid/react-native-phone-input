@@ -159,6 +159,10 @@ export interface ReactNativePhoneInputProps<TextComponentType extends React.Comp
      */
     onPressConfirm?: () => void;
     /**
+     * Function to be invoked when confirming phone number
+     */
+    onSubmitEditing?: () => void;
+    /**
      * Render function to replace the default flag
      */
     renderFlag?: ({ imageSource }: { imageSource: number }) => Element | JSX.Element;
